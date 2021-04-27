@@ -2,7 +2,7 @@ import request from '../helpers/request';
 import { fetchDownloadsCount } from './sourceforge';
 import { humanDate, humanSize } from '../helpers/utils';
 
-const baseURL = 'https://raw.githubusercontent.com/rajkale99';
+const baseURL = 'https://raw.githubusercontent.com/legionos-devices';
 
 const fetchDevices = async () => {
   try {
@@ -60,7 +60,7 @@ const fetchChangelog = async (variant, codename) => {
 };
 
 const fetchROMChangelog = async () => {
-  const res = await request('https://raw.githubusercontent.com/rajkale99/OTA/11/rom_changelog.txt', false);
+  const res = await request('https://raw.githubusercontent.com/legionos-devices/OTA/11/rom_changelog.txt', false);
   return res;
 };
 
