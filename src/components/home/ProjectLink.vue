@@ -11,7 +11,7 @@
       >
       <a
         target="_blank"
-        href="https://legionos.org/stats.html"
+        href="https://legionos.org/stats"
         @click="hidebar"
         class="btn"
         >Stats</a
