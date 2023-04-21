@@ -4,21 +4,21 @@
         <div class="buttons">
       <a
         target="_blank"
-        href="https://legionos.org"
+        href="https://project-legionos.org"
         @click="hidebar"
         class="btn"
         >Home</a
       >
       <a
         target="_blank"
-        href="https://legionos.org/stats"
+        href="https://project-legionos.org/stats"
         @click="hidebar"
         class="btn"
         >Stats</a
       >
       <a
         target="_blank"
-        href="https://blog.legionos.org"
+        href="https://blog.project-legionos.org"
         @click="hidebar"
         class="btn"
         >Blog</a
