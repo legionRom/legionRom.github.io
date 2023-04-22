@@ -8,13 +8,18 @@ jobs:
     name: Deploying to Github Pages
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: "12"
       - name: Install packages
         run: npm i
-      - name: Set Creds
-        run: git config user.name "rajkale99" && git config user.email "kaleraj.rk@gmail.com"
-      - name: Deploy
-        run: npm run deploy
+- name: GIT commit and push all changed files
+  env: 
+    CI_COMMIT_MESSAGE: Continuous Integration Build Artifacts
+    CI_COMMIT_AUTHOR: Continuous Integration
+  run: |
+    git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+    git config --global user.email "rajkale99@users.noreply.github.com"
+    git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
+    git push
