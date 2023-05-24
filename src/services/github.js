@@ -6,7 +6,7 @@ const baseURL = 'https://raw.githubusercontent.com/legionos-devices';
 
 const fetchDevices = async () => {
   try {
-    const res = await request(`${baseURL}/OTA/11/devices.json`);
+    const res = await request(`${baseURL}/OTA/s/devices.json`);
 
     const brands = [];
     const devices = [];
