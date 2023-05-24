@@ -26,7 +26,7 @@ const fetchDevices = async () => {
 
 const fetchBuilds = async (codename, variant) => {
   try {
-    const res = await request(`${baseURL}/OTA/11/${codename}/official/${variant}.json`);
+    const res = await request(`${baseURL}/OTA/s/${codename}/official/${variant}.json`);
 
     const promises = res.response.map(async (build) => {
       const downloads = await fetchDownloadsCount(build.filename, codename);
@@ -51,7 +51,7 @@ const fetchBuilds = async (codename, variant) => {
 
 const fetchChangelog = async (variant, codename) => {
   try {
-    const res = await request(`${baseURL}/ota/11/${codename}/changelogs_${variant}.txt`, false);
+    const res = await request(`${baseURL}/ota/s/${codename}/changelogs_${variant}.txt`, false);
 
     return res.includes('404') ? 'Changelog data no found' : res;
   } catch (err) {
@@ -60,7 +60,7 @@ const fetchChangelog = async (variant, codename) => {
 };
 
 const fetchROMChangelog = async () => {
-  const res = await request('https://raw.githubusercontent.com/legionos-devices/OTA/11/rom_changelog.txt', false);
+  const res = await request('https://raw.githubusercontent.com/legionos-devices/OTA/s/rom_changelog.txt', false);
   return res;
 };
 
