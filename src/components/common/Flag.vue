@@ -12,7 +12,7 @@ export default {
         BR:
           "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/259/flag-brazil_1f1e7-1f1f7.png",
         IND:
-          "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/259/flag-india_1f1ee-1f1f3.png",
+	  "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_India.png",
         US:
           "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/259/flag-united-states_1f1fa-1f1f8.png",
         UKR:
