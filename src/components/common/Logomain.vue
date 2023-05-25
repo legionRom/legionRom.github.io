@@ -1,6 +1,5 @@
 <template>
   <img
-    class="color_animation"
     :src="require('../../logo.png')"
     :width="width"
     alt="logo"
